@@ -1,0 +1,62 @@
+# ========================
+# ENVIRONMENT / CREDENTIALS
+# ========================
+.env
+*.pem
+*.key
+*.crt
+*.bak
+*.tmp
+*.log
+
+# SSL certificates
+server/config/ssl/
+
+# ========================
+# OS-SPECIFIC FILES
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# IDE / EDITOR FILES
+# ========================
+.vscode/
+.idea/
+
+# ========================
+# PYTHON
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+env/
+venv/
+.python-version
+
+# ========================
+# DOCKER
+# ========================
+**/docker-compose.override.yml
+*.pid
+
+# ========================
+# TERRAFORM
+# ========================
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+terraform.tfvars.json
+terraform/v2ray-vpn-keypair.pem
+
+# ========================
+# GENERATED ARTIFACTS
+# ========================
+terraform/client-config.json
+*.png
+vmess_qr.png
