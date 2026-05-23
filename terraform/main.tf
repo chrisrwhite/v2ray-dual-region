@@ -82,7 +82,7 @@ resource "aws_eip" "relay_eip" {
 resource "aws_instance" "relay" {
   provider                    = aws.relay
   ami                         = var.ami_relay
-  instance_type               = "t3.nano"
+  instance_type               = "t3.micro"
   key_name                    = aws_key_pair.relay_key.key_name
   associate_public_ip_address = false
   vpc_security_group_ids      = [aws_security_group.relay_sg.id]
@@ -145,7 +145,7 @@ resource "aws_eip" "exit_eip" {
 resource "aws_instance" "exit" {
   provider                    = aws.exit
   ami                         = var.ami_exit
-  instance_type               = "t3.nano"
+  instance_type               = "t3.micro"
   key_name                    = aws_key_pair.exit_key.key_name
   associate_public_ip_address = false
   vpc_security_group_ids      = [aws_security_group.exit_sg.id]
